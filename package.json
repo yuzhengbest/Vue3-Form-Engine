@@ -1,0 +1,55 @@
+{
+  "name": "vue3-form-engine",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --force",
+    "build": "npm run tsc && vite build",
+    "preview": "vite preview",
+    "tsc": "vue-tsc --noEmit",
+    "lint": "eslint ./src/**/*.{js,jsx,vue,ts,tsx} --fix",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "axios": "^1.7.2",
+    "element-plus": "^2.7.6",
+    "lodash": "^4.17.21",
+    "pinia": "^2.1.7",
+    "uuid": "^10.0.0",
+    "vue": "^3.4.21",
+    "vue-router": "^4.4.0",
+    "vuedraggable": "^4.0.1",
+    "wangeditor": "^4.7.15"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@types/lodash": "^4.17.6",
+    "@types/node": "18.16.1",
+    "@types/uuid": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "@typescript-eslint/parser": "^4.28.4",
+    "@vitejs/plugin-legacy": "^5.4.1",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-vue": "^7.16.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "sass": "^1.77.6",
+    "typescript": "^4.3.2",
+    "vite": "^5.2.0",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vue-tsc": "^2.0.6"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "npm run lint"
+    ]
+  }
+}
