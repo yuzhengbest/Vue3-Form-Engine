@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { PropType, nextTick, watch } from 'vue'
+import { PropType, nextTick } from 'vue'
 import { v4 } from 'uuid'
 import { WidgetForm } from '@/config/component'
 import VueDraggable from 'vuedraggable'
@@ -15,12 +15,6 @@ const props = defineProps({
     type: Object,
     default: () => ({})
   }
-})
-
-watch(() => props.widgetForm, (val) => {
-  console.log('val: ', val)
-}, {
-  deep: true
 })
 
 // 事件定义
@@ -243,20 +237,20 @@ const handleColMoveAdd = (event: any, row: any, index: string | number | symbol)
                     :list="col.list"
                     @add="handleColMoveAdd($event, element, colIndex)"
                   >
-                    <template #item="{ element, index }">
+                    <template #item="itemData">
                       <transition-group
                         name="fade"
                         tag="div"
                       >
                         <ElWidgetFormItem
-                          v-if="element.key"
-                          :key="element.key"
-                          :element="element"
+                          v-if="itemData.element.key"
+                          :key="itemData.element.key"
+                          :element="itemData.element"
                           :config="widgetForm.config"
                           :select-widget="widgetFormSelect"
-                          @click.stop="handleItemClick(element)"
-                          @copy="handleCopyClick(index, col.list)"
-                          @delete="handleDeleteClick(index, col.list)"
+                          @click.stop="handleItemClick(itemData.element)"
+                          @copy="handleCopyClick(itemData.index, col.list)"
+                          @delete="handleDeleteClick(itemData.index, col.list)"
                         />
                       </transition-group>
                     </template>

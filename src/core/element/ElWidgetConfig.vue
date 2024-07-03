@@ -4,16 +4,15 @@ import VueDraggable from 'vuedraggable'
 
 /** 属性定义 */
 const props = defineProps({
-  select: {
-    type: Object
-  }
+  // eslint-disable-next-line
+  select: Object
 })
 
 /** 事件定义 */
 const $emits = defineEmits(['update:select'])
 
 /** 常量定义 */
-const data = ref(props.select)
+const data = ref<any>(props.select)
 
 /** 监听 */
 watch(() => props.select, (val) => (data.value = val))
