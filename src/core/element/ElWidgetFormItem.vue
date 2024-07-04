@@ -25,6 +25,7 @@ defineEmits(['copy', 'delete'])
 <template>
   <div class="widget-item-container">
     <el-form-item
+      class="widget-view"
       v-if="element"
       :key="element.key"
       :class="{ active: selectWidget?.key === element.key }"
@@ -287,13 +288,13 @@ defineEmits(['copy', 'delete'])
         </el-upload>
       </template>
 
-      <!-- <template v-if="element.type === 'richtext-editor'">
+      <template v-if="element.type === 'richtext-editor'">
         <RichTextEditor
           :value="element.options.defaultValue"
           :disable="element.options.disabled"
           :style="{ width: element.options.width }"
         />
-      </template> -->
+      </template>
     </el-form-item>
     <div
       v-if="selectWidget?.key === element.key"

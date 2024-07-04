@@ -76,6 +76,7 @@ function handleSelectModeChange (val: boolean) {
     label-position="top"
     v-if="data"
     :key="data.key"
+    size="default"
   >
     <el-form-item
       label="字段标识"

@@ -25,7 +25,12 @@ watch(data, (val) => {
 
 <template>
   <div class="form-config-container">
-    <el-form label="top">
+    <el-form
+      size="default"
+      :label-width="100"
+      label-position="right"
+      label-suffix=":"
+    >
       <el-form-item label="标签对齐">
         <el-radio-group v-model="data.labelPosition">
           <el-radio-button label="left">

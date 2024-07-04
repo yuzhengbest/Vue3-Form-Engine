@@ -58,12 +58,12 @@ function generateModel (list: any[]) {
         rules.value[id] = JSON.parse(JSON.stringify(list[index].options.rules))
       }
 
-      if (rules.value[id].enum) {
+      if (rules.value[id]?.enum) {
         // eslint-disable-next-line no-eval
         rules.value[id].enum = eval(rules.value[id].enum)
       }
 
-      if (rules.value[id].pattern) {
+      if (rules.value[id]?.pattern) {
         // eslint-disable-next-line no-eval
         rules.value[id].pattern = eval(rules.value[id].pattern)
         rules.value[id].type = 'string'
@@ -126,7 +126,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="fc-style">
+  <div class="el-design__form">
     <el-form
       ref="formRef"
       label-suffix=":"

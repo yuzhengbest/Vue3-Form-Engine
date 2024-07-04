@@ -158,12 +158,13 @@ function handleReset () {
 </script>
 
 <template>
-  <div class="fc-style">
-    <el-container class="fc-container">
-      <el-main class="fc-main">
+  <div class="el-design__form">
+    <el-container class="el-design__form--container">
+      <el-main class="el-design__form--main">
         <el-container>
           <el-aside
             width="250px"
+            class="el-design__form--group"
           >
             <div class="components">
               <FormGroup
@@ -186,7 +187,7 @@ function handleReset () {
               />
             </div>
           </el-aside>
-          <el-main class="center-container">
+          <el-main class="el-design__form--design">
             <ElCustomHeader
               v-bind="$props"
               @preview="() => (previewVisible = true)"
@@ -206,8 +207,8 @@ function handleReset () {
             </el-main>
           </el-main>
           <el-aside
-            class="widget-config-container"
-            width="300px"
+            class="el-design__form--config"
+            width="380px"
           >
             <el-container>
               <el-header>

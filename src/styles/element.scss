@@ -1,4 +1,4 @@
-.fc-style {
+.el-design__form {
   .el-main {
     padding: 0;
   }
@@ -13,18 +13,8 @@
     padding: 10px 15px;
   }
   .config-content {
-    .el-radio-group {
-      margin-top: 10px;
-      vertical-align: super;
+    .el-form-item__content {
+      margin-left: 8px;
     }
-    .el-radio {
-      margin-bottom: 10px;
-    }
-  }
-  .el-rate {
-    margin-top: 6px;
-  }
-  .el-checkbox {
-    line-height: 32px;
   }
 }
