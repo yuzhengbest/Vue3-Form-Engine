@@ -75,7 +75,6 @@ const configTab = ref<string>('widget')
 const dataJsonTemplate = ref<string>('')
 const dataCodeTemplate = ref<string | undefined>('')
 const codeLanguage = ref<string>(CodeType.Vue)
-
 const widgetFormSelect = ref(undefined)
 const generateFormRef = ref(null)
 
