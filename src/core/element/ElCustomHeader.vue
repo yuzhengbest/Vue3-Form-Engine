@@ -14,7 +14,7 @@ defineEmits(['uploadJson', 'clearable', 'preview', 'generateJson', 'generateCode
       @click="$emit('uploadJson')"
     >
       <template #icon>
-        <svg-icon name="upload" class="icon-large" />
+        <svg-icon name="upload" />
       </template>
       导入JSON
     </el-button>
